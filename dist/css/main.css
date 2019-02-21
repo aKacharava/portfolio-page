@@ -4,13 +4,13 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 500ms ease-out; }
+  transition: all 300ms ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all 500ms ease-out; }
+    transition: all 300ms ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -19,6 +19,18 @@
       opacity: 0; }
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
+
+.main-menu-nav {
+  display: -webkit-inline-box;
+  list-style-type: none; }
+  .main-menu-nav .nav-item {
+    margin: 0 15px; }
+    .main-menu-nav .nav-item.current .nav-link {
+      color: #e6814d; }
+    .main-menu-nav .nav-item .nav-link {
+      transition: all 300ms ease-out; }
+      .main-menu-nav .nav-item .nav-link:hover {
+        color: #e6814d; }
 
 .menu {
   position: fixed;
@@ -42,13 +54,13 @@
     background: #3a3c57;
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    transition: all 500ms ease-out; }
+    transition: all 300ms ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #444666;
     transform: translate3d(0, 100%, 0);
-    transition: all 500ms ease-out; }
+    transition: all 300ms ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
@@ -59,7 +71,7 @@
       border: solid 3px #e6814d; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 500ms ease-out; }
+    transition: all 300ms ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -73,7 +85,7 @@
     font-weight: 300;
     color: #fff;
     text-decoration: none;
-    transition: all 500ms ease-out; }
+    transition: all 300ms ease-out; }
     .menu .nav-link:hover {
       color: #e6814d; }
 
@@ -127,7 +139,8 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(72, 74, 108, 0.5); }
+    background: #484a6c;
+    color: #e6814d; }
 
 a {
   color: #fff;
@@ -150,7 +163,7 @@ main {
       padding: 0.4rem; }
       main .icons a:hover {
         color: #e6814d;
-        transition: all 500ms ease-out; }
+        transition: all 300ms ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -168,7 +181,8 @@ main {
     border: #e6814d 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    text-align: -webkit-auto; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -178,7 +192,8 @@ main {
   .about-info .job {
     background: #4e5175;
     padding: 0.5rem;
-    border-bottom: #e6814d 5px solid; }
+    border-bottom: #e6814d 5px solid;
+    text-align: left; }
 
 .projects {
   display: grid;
@@ -190,7 +205,7 @@ main {
     .projects img:hover {
       opacity: 0.5;
       border-color: #e6814d;
-      transition: all 500ms ease-out; }
+      transition: all 300ms ease-out; }
 
 .boxes {
   display: flex;
@@ -203,7 +218,7 @@ main {
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
-    transition: all 500ms ease-out; }
+    transition: all 300ms ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       background: #e6814d;
@@ -244,12 +259,16 @@ main {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
+  .main-menu-nav {
+    display: none; }
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    padding: 2rem; }
     main .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      font-size: 4rem; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -269,11 +288,15 @@ main {
       background: url("../img/profile-pic-small.jpg");
       width: 150px;
       height: 150px; }
+  main .icons {
+    font-size: 2rem; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .boxes div {
+    font-size: 1rem; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {

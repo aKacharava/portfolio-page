@@ -38,6 +38,30 @@
   }
 }
 
+// Main menu desktop
+.main-menu-nav {
+  display: -webkit-inline-box;
+  list-style-type: none;
+
+  .nav-item {
+    margin: 0 15px;
+
+    &.current {
+      .nav-link {
+        color: $secondary-color;
+      }
+    }
+
+    .nav-link {
+      @include easeOut;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
 // Menu overlay
 .menu {
   position: fixed;
