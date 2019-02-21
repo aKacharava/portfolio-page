@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-page",
+  "version": "1.0.0",
+  "description": "Responsive portfolio page",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aKacharava/portfolio-page.git"
+  },
+  "author": "Alexander Kacharava",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aKacharava/portfolio-page/issues"
+  },
+  "homepage": "https://github.com/aKacharava/portfolio-page#readme",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
