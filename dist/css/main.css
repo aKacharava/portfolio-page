@@ -166,16 +166,15 @@ main {
         transition: all 300ms ease-out; }
   main#home {
     overflow: hidden; }
-    main#home .akdev-logo{
-      display: block;}
+    main#home .akdev-logo {
+      display: block; }
     main#home h1 {
       margin-top: 20vh; }
 
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio"
- "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -202,14 +201,35 @@ main {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr); }
+  .projects .item {
+    position: relative; }
   .projects img {
     width: 100%;
     height: 200px;
     border: 3px #fff solid; }
-    .projects img:hover {
-      opacity: 0.5;
+  .projects .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 100%;
+    opacity: 0;
+    border: 3px solid;
+    background-color: #333; }
+    .projects .overlay:hover {
+      opacity: 0.95;
       border-color: #e6814d;
       transition: all 300ms ease-out; }
+    .projects .overlay .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center; }
 
 .boxes {
   display: flex;
@@ -234,7 +254,8 @@ main {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: 0.3rem; }
+  margin-bottom: 0.3rem;
+  transition: all 300ms; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #e6814d;
     color: #000; }
@@ -295,11 +316,7 @@ main {
   main .icons {
     font-size: 2rem; }
   .about-info {
-    grid-template-areas: "bioimage"
- "bio"
- "job1"
- "job2"
- "job3";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
