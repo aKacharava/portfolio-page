@@ -1,5 +1,9 @@
 // Widescreens
 @include mediaXL {
+  main{
+    padding: 4rem 25rem;
+  }
+
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
